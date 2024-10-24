@@ -11,6 +11,7 @@ python = "^3.12"
 django = "^5.1.2"
 django-allauth = {extras = ["socialaccount"], version = "^65.1.0"}
 python-dotenv = "^1.0.1"
+django-tailwind = {extras = ["reload"], version = "^3.8.0"}
 
 
 [tool.poetry.group.dev.dependencies]
