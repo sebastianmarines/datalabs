@@ -89,7 +89,7 @@
     <!-- Pagination -->
     {% if is_paginated %}
     <div class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6 mt-6">
-        <div class="flex-1 flex justify-between sm:hidden">
+        <div class="flex-1 flex justify-between">
             {% if page_obj.has_previous %}
             <a href="?page={{ page_obj.previous_page_number }}" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
                 Previous
