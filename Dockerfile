@@ -1,8 +1,10 @@
 # Dockerfile
 FROM python:3.12-slim as python-base
 
+ENV DJANGO_SETTINGS_MODULE=core.settings.local
+
 # Python build stage
-FROM python-base as builder
+FROM python-base AS builder
 
 RUN apt-get update && apt-get install -y \
     curl \
@@ -46,8 +48,8 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Install Tailwind dependencies and build
-RUN python manage.py tailwind install
-RUN python manage.py tailwind build
+RUN python manage.py tailwind install --no-input
+RUN python manage.py tailwind build --no-input
 
 # Create directory for static files
 RUN mkdir -p /app/staticfiles /app/media
@@ -57,4 +59,4 @@ RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
 
-CMD ["gunicorn", "datalabs.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8000"]
