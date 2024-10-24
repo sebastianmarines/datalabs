@@ -9,7 +9,8 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "^3.12"
 django = "^5.1.2"
-django-allauth = "^65.1.0"
+django-allauth = {extras = ["socialaccount"], version = "^65.1.0"}
+python-dotenv = "^1.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
