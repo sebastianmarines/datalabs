@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Sebastian Marines"]
 readme = "README.md"
-package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -13,6 +12,7 @@ django-allauth = {extras = ["socialaccount"], version = "^65.1.0"}
 python-dotenv = "^1.0.1"
 django-tailwind = {extras = ["reload"], version = "^3.8.0"}
 gunicorn = "^23.0.0"
+dj-database-url = "^2.3.0"
 
 
 [tool.poetry.group.dev.dependencies]
