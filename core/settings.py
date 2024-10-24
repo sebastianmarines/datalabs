@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -48,8 +49,9 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
     "tailwind",
-    "theme", # Tailwind theme
-    "django_browser_reload"
+    "theme",  # Tailwind theme
+    "django_browser_reload",
+    "dataset",
 ]
 
 MIDDLEWARE = [
@@ -70,7 +72,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 LOGIN_REDIRECT_URL = "/"
-ACCOUNT_LOGOUT_REDIRECT_URL ="/accounts/login"
+ACCOUNT_LOGOUT_REDIRECT_URL = "/accounts/login"
 
 SITE_ID = 1
 
