@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "theme",  # Tailwind theme
     "django_browser_reload",
     "dataset",
+    "django.contrib.humanize",
 ]
 
 MIDDLEWARE = [
